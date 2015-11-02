@@ -6,11 +6,41 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-	  <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
 
-<%= yield %>
+<body>
+	<div class="header"> <!-- header -->
+		<header>
+			<nav>
+				<% if user_signed_in? %>
+					<div class="logosmall">
+						<img src="/assets/logo-small.png">
+					</div>
+					<%= link_to 'sign out', destroy_user_session_path, method: :delete %>
+				<% else %>
+					<%= link_to 'sign in', new_user_session_path %>
+					<%= link_to 'sign up', new_user_registration_path %>
+				<% end %>
+			</nav>
+		</header> 
+	</div> <!-- header -->
+
+	<div class="notifications"> <!-- notifications -->
+		<p>notifications</p>
+		<p class="notice"><%= notice %></p>
+	  <p class="alert"><%= alert %></p>
+	</div> <!-- notifications -->
+
+	<div class="main"> <!-- main -->
+	  <main>
+			<%= yield %>
+		</main>
+	</div> <!-- main -->
+
+	<div class="footer"> <!-- footer -->
+		<footer> 
+			<h1>footer</h1>
+		</footer>
+	</div> <!-- footer -->
 
 </body>
 </html>

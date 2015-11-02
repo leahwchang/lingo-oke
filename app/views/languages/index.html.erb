@@ -1,0 +1,21 @@
+<h1>Languages#index</h1>
+<p>Find me in app/views/languages/index.html.erb</p>
+
+<% @languages.each do |language| %>
+	<div class="languages">
+		<div class="langname">
+			<%= language.langname %>
+		</div>
+		<div class="songs">
+			<% if language.songs.any? %>
+				<% language.songs.each do |song| %>
+					<%= link_to (@song) do %>
+						<div class="songname">
+							<%= song.songname %>
+						</div>
+					<% end %>
+				<% end %>
+			<% end %>
+		</div>
+	</div>
+<% end %>

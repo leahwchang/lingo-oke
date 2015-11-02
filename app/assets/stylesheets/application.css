@@ -13,3 +13,76 @@
  *= require_tree .
  *= require_self
  */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+	margin: 0 0 100px; /* bottom = footer height */
+}
+
+/*********** header ***********/
+
+.header {
+	border: 1px solid black;
+	width: 100%;
+	height: 80px;
+}
+
+.header a {
+	margin-top: 25px;
+	margin-right: 25px;
+	float: right;
+}
+
+.logosmall img {
+	margin-top: 5px;
+	margin-left: 20px;
+	width: 10%;
+	height: 10%;
+	border: 1px solid black;
+	float: left;
+}
+
+/*********** header ***********/
+
+/*********** notifications ***********/
+
+.notifications {
+	border: 1px solid black;
+	width: 100%;
+	height: 50px;
+}
+
+.notifications p {
+	display: inline-block;
+	margin-left: 15px;
+}
+
+/*********** notifications ***********/
+
+/*********** main ***********/
+
+.main {
+	border: 1px solid black;
+	width: 85%;
+	margin: 0 auto;
+	clear: both;
+}
+
+/*********** main ***********/
+
+/*********** footer ***********/
+
+.footer {
+	position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 80px;
+  width: 100%;
+  border: 1px solid black;
+}
+
+/*********** footer ***********/
