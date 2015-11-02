@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151030231757) do
+ActiveRecord::Schema.define(version: 20151101035837) do
+
+  create_table "languages", force: :cascade do |t|
+    t.string "langname"
+  end
+
+  create_table "songs", force: :cascade do |t|
+    t.string  "songname"
+    t.integer "language_id"
+  end
+
+  create_table "translations", force: :cascade do |t|
+    t.string  "varname"
+    t.text    "varbody"
+    t.integer "song_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",    null: false

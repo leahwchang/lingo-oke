@@ -14,3 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function() {
+	$(".langname").click(function() {
+	$(".songs").slideToggle( "slow" );
+		});
+});
