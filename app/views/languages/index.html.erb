@@ -1,21 +1,28 @@
 <h1>Languages#index</h1>
 <p>Find me in app/views/languages/index.html.erb</p>
 
-<% @languages.each do |language| %>
-	<div class="languages">
+<!-- show form to create langugages if user is admin -->
+<% if current_user[:admin] == true %>
+	<%= render 'form' %>
+<% end %>
+<!-- show form to create langugages if user is admin -->
+
+<div class="languages">
+	<% @languages.each do |language| %>
 		<div class="langname">
 			<%= language.langname %>
 		</div>
+
 		<div class="songs">
 			<% if language.songs.any? %>
 				<% language.songs.each do |song| %>
-					<%= link_to (@song) do %>
 						<div class="songname">
-							<%= song.songname %>
+							<%= link_to song.songname, language_song_path(language, song) %>
+							<!-- pass in two arguments, @language and @song -->
 						</div>
-					<% end %>
 				<% end %>
 			<% end %>
 		</div>
-	</div>
-<% end %>
+
+	<% end %>
+</div>

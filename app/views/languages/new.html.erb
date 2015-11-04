@@ -1,2 +1,8 @@
 <h1>Languages#new</h1>
 <p>Find me in app/views/languages/new.html.erb</p>
+
+<!-- show form to create langugages if user is admin -->
+<% if current_user[:admin] == true %>
+	<%= render 'form' %>
+<% end %>
+<!-- show form to create langugages if user is admin -->

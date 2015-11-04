@@ -11,7 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151101035837) do
+ActiveRecord::Schema.define(version: 20151104230422) do
+
+  create_table "images", force: :cascade do |t|
+    t.integer "song_id"
+    t.string  "imagename"
+    t.string  "imageurl"
+  end
 
   create_table "languages", force: :cascade do |t|
     t.string "langname"
@@ -20,6 +26,7 @@ ActiveRecord::Schema.define(version: 20151101035837) do
   create_table "songs", force: :cascade do |t|
     t.string  "songname"
     t.integer "language_id"
+    t.string  "songurl"
   end
 
   create_table "translations", force: :cascade do |t|
