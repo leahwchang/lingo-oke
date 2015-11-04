@@ -4,5 +4,33 @@
 	<%= @song.songname %>
 </h1>
 
+<!-- listing exercises -->
+<div class="exercises">
+	<div class="ex1">
+		<p>exercise name</p>
+	</div>
 
+	<div class="ex1">
+		<p>exercise name</p>
+	</div>
 
+	<div class="ex1">
+		<p>exercise name</p>
+	</div>
+</div>
+<!-- listing exercises -->
+
+<%= audio_tag("#{@song.songurl}", controls: true) %>
+
+<% @song.translations.each do |translation| %>
+	<h3><%= translation.varname %></h3>
+	<p><%= translation.varbody %></p>
+<% end %>
+
+<div class="songanimation">
+	<% @song.images.each_with_index do |image, index| %>
+		<div class='<%="image_#{index}" %>'>
+			<%= image_tag("#{image.imageurl}") %>
+		</div>
+	<% end %>
+</div>
