@@ -2,6 +2,7 @@ class SongsController < ApplicationController
 	before_action :authenticate_user!
 	before_action :set_language, only: [:create, :new, :index, :show]
 	before_action :set_song, only: [:show]
+  respond_to :json
 
   def index
   	@songs = Song.all
@@ -10,6 +11,13 @@ class SongsController < ApplicationController
   def show
     @images = Image.all
     @translations = Translation.all
+    respond_to do |format|
+    format.html
+    format.json { render :json => @song.to_json(
+      :include => [:translations, :images] 
+      )
+    }
+    end
   end
 
   def create
