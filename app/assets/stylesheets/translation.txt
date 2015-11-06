@@ -1,0 +1,6 @@
+<% @song.translations.each_with_index do |translation, index| %>
+	<h3><%= translation.varname %></h3>
+	<div id='<%="translation_#{index}" %>'>
+		<%= translation.varbody %>
+	</div>
+<% end %>

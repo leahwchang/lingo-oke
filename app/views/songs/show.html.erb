@@ -20,16 +20,11 @@
 </div>
 <!-- listing exercises -->
 
-<%= audio_tag("#{@song.songurl}", controls: true, class: "ouraudio") %>
+<%= audio_tag("#{@song.songurl}", controls: true, class: "audioplayer") %>
 
-<div id="footnote"></div>
-
-<% @song.translations.each_with_index do |translation, index| %>
-	<h3><%= translation.varname %></h3>
-	<div id='<%="translation_#{index}" %>'>
-		<%= translation.varbody %>
-	</div>
-<% end %>
+<div id="footnote1"></div>
+<div id="footnote2"></div>
+<div id="footnote3"></div>
 
 <div class="songanimation">
 	<% @song.images.each_with_index do |image, index| %>

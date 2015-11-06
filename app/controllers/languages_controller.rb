@@ -1,14 +1,13 @@
 class LanguagesController < ApplicationController
   before_action :authenticate_user!
-
   respond_to :json
+  
   def index
     @language = Language.new
     @languages = Language.all
     @songs = Song.all
-    @translations = Translation.all
-    @images = Image.all
-    respond_with(@languages) do |format|
+    respond_to do |format|
+      format.html
       format.json { render :json => @languages.to_json(
         :include => [
           :songs => { :include => [:translations, :images] 
