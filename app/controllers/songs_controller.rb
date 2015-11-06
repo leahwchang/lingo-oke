@@ -9,11 +9,7 @@ class SongsController < ApplicationController
 
   def show
     @images = Image.all
-    @translation = Translation.find(params[:id])
-    respond_to do |format|
-      format.html
-      format.json { render json: @translation }
-    end
+    @translations = Translation.all
   end
 
   def create
