@@ -20,11 +20,15 @@
 </div>
 <!-- listing exercises -->
 
-<%= audio_tag("#{@song.songurl}", controls: true) %>
+<%= audio_tag("#{@song.songurl}", controls: true, class: "ouraudio") %>
 
-<% @song.translations.each do |translation| %>
+<div id="footnote"></div>
+
+<% @song.translations.each_with_index do |translation, index| %>
 	<h3><%= translation.varname %></h3>
-	<p><%= translation.varbody %></p>
+	<div id='<%="translation_#{index}" %>'>
+		<%= translation.varbody %>
+	</div>
 <% end %>
 
 <div class="songanimation">
