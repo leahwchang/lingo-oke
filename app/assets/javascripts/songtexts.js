@@ -1,3 +1,5 @@
+
+
 // retrive json data and split by verses
 $.getJSON( "/languages.json", function(json) {
     var trans1 = json[0].songs[0].translations[0].varbody;
@@ -9,7 +11,6 @@ $.getJSON( "/languages.json", function(json) {
     var trans3 = json[0].songs[0].translations[2].varbody;
     var split3 = trans3.split(",");
     console.log( split3 );
-
 
 // click button #play and play verses and song at the same time
   // play verses below
@@ -35,6 +36,8 @@ $.getJSON( "/languages.json", function(json) {
       {target: "footnote3", text: split3[3], start: 20.5, end: 24 },
     ];
 
+
+
   $.each(popObj, function(key, note) {
     popcorn.footnote({
       start: note.start,
@@ -46,15 +49,16 @@ $.getJSON( "/languages.json", function(json) {
     });
   });
 
-// play new colored texts below
 
-  // var cc = 0;
-  // function nextWord() {
-  //   $('#p'+cc).css("color", "red");
-  //   cc++;
-  //   if(cc> songtext.length-1) return;
-  //   window.setTimeout(nextWord, songtext[cc-1][1]);
-  // }
+
+// play new colored texts below
+$('.footnote').textillate({
+    // minDisplayTime: 1000,
+    in: { effect: 'flipInX' }
+    // out :{  delay: 3, effect: 'lightSpeedOut'},
+    // loop: true
+});
+
 
   // play audio below
   var audioElement = document.getElementById("audioplayer");
@@ -67,9 +71,16 @@ $.getJSON( "/languages.json", function(json) {
     $('#play').click(function() {
         audioElement.play();
     });
+
+    // add stop button
+    // add stop button
+    // add stop button
     
     $('#pause').click(function() {
         audioElement.pause();
     });
 	});
+
+
+
 });
