@@ -20,11 +20,18 @@
 </div>
 <!-- listing exercises -->
 
-<%= audio_tag("#{@song.songurl}", controls: true, class: "audioplayer") %>
+<div>
+	<%= audio_tag("#{@song.songurl}", id: "audioplayer", controls: true) %>
+</div>
 
-<div class="popcorneffects" id="footnote1"></div>
+	  <button id="play">Play</button>
+    <button id="pause">Stop</button>
+
+<div id="footnote1"></div>
 <div id="footnote2"></div>
 <div id="footnote3"></div>
+
+
 
 <div class="songanimation">
 	<% @song.images.each_with_index do |image, index| %>
