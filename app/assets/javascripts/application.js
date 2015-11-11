@@ -12,9 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require popcorn-complete
-//= require jquery.lettering
-//= require jquery.textillate
 //= require turbolinks
 //= require_tree .
 
