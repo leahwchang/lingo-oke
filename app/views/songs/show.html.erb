@@ -21,14 +21,13 @@
 <!-- listing exercises -->
 
 <div>
-	<%= audio_tag("#{@song.songurl}", id: "audioplayer", controls: true) %>
+	<%= audio_tag("#{@song.songurl}", id: "audioplayer") %>
 </div>
 
 <button onclick="playLyrics(), playAudio()" type="button">Play</button>
 <button onclick="pauseAudio()" type="button">Pause</button><br> 
 
 <div class="footnote">
-
 	<div id="footnote1" data-in-effect="flipInX"></div>
 	<div id="footnote2" data-in-effect="flipInX"></div>
 	<div id="footnote3" data-in-effect="flipInX"></div>
