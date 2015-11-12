@@ -120,16 +120,23 @@ function playEnglish() {
 }
 
 //////// lyrics - play all ////////
-var myVar1;
-var myVar2;
-var myVar3;
+var l1;
+var l2;
+var l3;
 
 function playLyrics() {
-  myVar1 = setTimeout(playMandarin, 7750);
-  myVar2 = setTimeout(playPinYin, 7750);
-  myVar3 = setTimeout(playEnglish, 7750);
+  l1 = setTimeout(playMandarin, 7750);
+  l2 = setTimeout(playPinYin, 7750);
+  l3 = setTimeout(playEnglish, 7750);
 }
 
+function pauseLyrics() {
+	clearTimeout(l1);
+	clearTimeout(l2);
+	clearTimeout(l3);
+}
+
+//////// images - animations ////////
 function playPictures() {
   $('#image_1').stop(true, true).animate({ left: '-10px' }, 1000, function() {
     $('#image_1').stop(true, true).animate({ left: '20px' }, 1000);
@@ -139,21 +146,30 @@ function playPictures() {
   });
 }
 
-function playAnimation() {
-	playPictures(); // on load
-	setInterval(playPictures, 2000); // set to run continously
-}
-// pulsate();
-//var clouds = document.getElementById("image_1");
-// function playImages( ) {
-// 	clouds.animate 
-// }
+var t;
 
-// function playAll( ) {
-// 	playSong( );
-// 	playLyrics( );
-// 	playImages( );
-// }
+function playAnimations() {
+	playPictures(); // on load
+	t = setInterval(playPictures, 2000); // set to run continuously
+}
+
+function pauseAnimations() {
+	clearTimeout(t);
+}
+
+//////// play all components ////////
+function playAll( ) {
+	playAudio();
+	playLyrics();
+	playAnimations();
+}
+
+//////// pause all components ////////
+function pauseAll() {
+	pauseAudio();
+	pauseLyrics();
+	pauseAnimations();
+}
 
 // function pauseAll( ) {
 
