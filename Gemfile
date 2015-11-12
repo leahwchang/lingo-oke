@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'bourbon'
 gem 'devise'
 gem "paperclip", "~> 4.3"
 

@@ -20,16 +20,28 @@
 </div>
 <!-- listing exercises -->
 
-<%= audio_tag("#{@song.songurl}", controls: true, class: "audioplayer") %>
-
-<div id="footnote1"></div>
-<div id="footnote2"></div>
-<div id="footnote3"></div>
+<div>
+	<%= audio_tag("#{@song.songurl}", id: "audioplayer") %>
+</div>
 
 <div class="songanimation">
-	<% @song.images.each_with_index do |image, index| %>
-		<div class='<%="image_#{index}" %>'>
-			<%= image_tag("#{image.imageurl}") %>
-		</div>
-	<% end %>
+	<div class="animation">
+		<% @song.images.each_with_index do |image, index| %>
+			<div>
+				<%= image_tag("#{image.imageurl}", id: "image_#{index}") %>
+			</div>
+		<% end %>
+	</div>
 </div>
+
+<div class="buttons">
+	<button onclick="playAll()" type="button">Play</button>
+	<button onclick="pauseAll()" type="button">Stop</button><br> 
+</div>
+
+<div class="footnote">
+	<div id="footnote1"></div>
+	<div id="footnote2"></div>
+	<div id="footnote3"></div>
+</div>
+
