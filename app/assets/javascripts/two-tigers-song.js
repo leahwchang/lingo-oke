@@ -30,7 +30,7 @@ console.log(split1);
 console.log(split2);
 console.log(split3);
 
-// audio 
+//////// audio ////////
 var audio = document.getElementById("audioplayer");
 
 function playAudio() {
@@ -41,8 +41,8 @@ function pauseAudio() {
   audioplayer.pause();
 }
 
-// play mandarin translation lyrics below
-
+//////// lyrics - mandarin ////////
+//////// play mandarin translation lyrics below //////
 function playMandarin() {
 	var verse1;
   verse1 = [ // [text, duration]
@@ -67,8 +67,8 @@ function playMandarin() {
 	}
 }
 
-// play pinyin translation lyrics below
-
+//////// lyrics - pinyin ////////
+//////// play pinyin translation lyrics below //////
 function playPinYin() {
 	var verse2;
   verse2 = [ // [text, duration]
@@ -93,8 +93,8 @@ function playPinYin() {
 	}
 }
 
-// play english translation lyrics below
-
+//////// lyrics - english ////////
+//////// play english translation lyrics below //////
 function playEnglish() {
 	var verse3;
   verse3 = [ // [text, duration]
@@ -119,8 +119,7 @@ function playEnglish() {
 	}
 }
 
-// play all translation lyrics at the same time below
-
+//////// lyrics - play all ////////
 var myVar1;
 var myVar2;
 var myVar3;
@@ -130,8 +129,24 @@ function playLyrics() {
   myVar2 = setTimeout(playPinYin, 7750);
   myVar3 = setTimeout(playEnglish, 7750);
 }
-// function playImages( ) {
 
+function playPictures() {
+  $('#image_1').stop(true, true).animate({ left: '-10px' }, 1000, function() {
+    $('#image_1').stop(true, true).animate({ left: '20px' }, 1000);
+  });
+  $('#image_2').stop(true, true).animate({ top: '10px' }, 1000, function() {
+    $('#image_2').stop(true, true).animate({ top: '-10px' }, 1000 );
+  });
+}
+
+function playAnimation() {
+	playPictures(); // on load
+	setInterval(playPictures, 2000); // set to run continously
+}
+// pulsate();
+//var clouds = document.getElementById("image_1");
+// function playImages( ) {
+// 	clouds.animate 
 // }
 
 // function playAll( ) {
@@ -139,7 +154,6 @@ function playLyrics() {
 // 	playLyrics( );
 // 	playImages( );
 // }
-
 
 // function pauseAll( ) {
 
