@@ -4,5 +4,7 @@ class UsersController < ApplicationController
   	@user = current_user
   	# show lesson view tracking: completed lessons and incompleted lessons
   	# use view count
+
+  	# impressionist gem
   end
 end

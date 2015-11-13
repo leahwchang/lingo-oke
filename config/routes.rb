@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
-  resources :languages do
-    resources :songs do
-      resources :translations
-      resources :flashcards
+  resources :languages, only: [:index] do
+    resources :songs, only: [:show] do
+      # resources :translations
+      resources :flashcards, only: [:index]
     end
   end
 
