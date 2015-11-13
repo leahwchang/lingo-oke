@@ -1,36 +1,35 @@
 <div class="maincontainer">
 
 	<h1>Languages#index</h1>
-	<p>Find me in app/views/languages/index.html.erb</p>
-
+	</br>
 	<!-- show form to create langugages if user is admin -->
 	<% if current_user[:admin] == true %>
 		<%= render 'form' %>
 	<% end %>
 	<!-- show form to create langugages if user is admin -->
 
-<% @languages.each do |language| %>
-	<div class = "panel-group" id = "accordion">
-	  <div class = "panel panel-default">
-	    <div class = "panel-heading">
-	      <h4 class = "panel-title">
-	        <a data-toggle = "collapse" data-parent = "#accordion" href = "#collapseOne">
-	           <%= language.langname %>
-	        </a>
-	      </h4>
-	    </div>
-	    <% if language.songs.any? %>
-		    <% language.songs.each do |song| %>
-			    <div id = "collapseOne" class = "panel-collapse collapse">
-			      <div class = "panel-body">
-			        <%= link_to song.songname, language_song_path(language, song) %>
-			        <!-- pass in two arguments, @language and @song -->
-			      </div>
-			    </div>
-		    <% end %>
-	    <% end %>    
-	  </div>
-	</div>
-<% end %>
+	<% @languages.each do |language| %>
+		<div class = "panel-group" id = "accordion">
+		  <div class = "panel panel-default">
+		    <div class = "panel-heading">
+		      <h4 class = "panel-title">
+		        <a data-toggle = "collapse" data-parent = "#accordion" href = "#collapseOne">
+		           <%= language.langname %>
+		        </a>
+		      </h4>
+		    </div>
+		    <% if language.songs.any? %>
+			    <% language.songs.each do |song| %>
+				    <div id = "collapseOne" class = "panel-collapse collapse">
+				      <div class = "panel-body">
+				        <%= link_to song.songname, language_song_path(language, song) %>
+				        <!-- pass in two arguments, @language and @song -->
+				      </div>
+				    </div>
+			    <% end %>
+		    <% end %>    
+		  </div>
+		</div>
+	<% end %>
 
 </div>

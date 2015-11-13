@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Lilita+One' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -23,29 +24,29 @@
 			    	<% if user_signed_in? %>
 			    		<li role="presentation">
 				      	<a role="menuitem" tabindex="-1" href="#">
-				      		<%= link_to 'HOME', languages_path %>
+				      		<%= link_to 'HOME', languages_path, id: "menulinks" %>
 				      	</a>
 				      </li>
 				      <li role="presentation">
 				      	<a role="menuitem" tabindex="-1" href="#">
-				      		<%= link_to 'PROFILE', user_path(current_user.id) %>
+				      		<%= link_to 'PROFILE', user_path(current_user.id), id: "menulinks" %>
 				      	</a>
 				      </li>
-			    		<li role="presentation" class="divider"></li> <!-- divider -->
+			    		<li role="presentation"></li> <!-- divider -->
 				      <li role="presentation">
 				      	<a role="menuitem" tabindex="-1" href="#">
-				      		<%= link_to 'SIGN OUT', destroy_user_session_path, method: :delete %>
+				      		<%= link_to 'SIGN OUT', destroy_user_session_path, method: :delete, id: "menulinks" %>
 				      	</a>
 				      </li>
 			      <% else %>
 			      <li role="presentation">
 			      	<a role="menuitem" tabindex="-1" href="#">
-			      		<%= link_to 'SIGN IN', new_user_session_path %>
+			      		<%= link_to 'SIGN IN', new_user_session_path, id: "menulinks" %>
 			      	</a>
 			      </li>
 			      <li role="presentation">
 			      	<a role="menuitem" tabindex="-1" href="#">
-			      		<%= link_to 'SIGN UP', new_user_registration_path %>
+			      		<%= link_to 'SIGN UP', new_user_registration_path, id: "menulinks" %>
 			      	</a>
 			      </li>
 			      <% end %>
