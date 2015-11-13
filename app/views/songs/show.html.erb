@@ -1,27 +1,13 @@
 <div class="songcontainer">
-
-	<h1>Songs#show</h1>
 	</br>
 	<h1>
 		<%= @song.songname %>
 	</h1>
 	</br>
-	<!-- listing exercises -->
-	<div class="exercises">
-		<div class="ex1">
-			<p>exercise name</p>
-		</div>
-
-		<div class="ex1">
-			<p>exercise name</p>
-		</div>
-
-		<div class="ex1">
-			<p>exercise name</p>
-		</div>
+	<div class="pagelinks">
+		<%= link_to 'FLASHCARDS', language_song_flashcards_path(@language, @song) %>
 	</div>
-	<!-- listing exercises -->
-
+</br>
 	<div>
 		<%= audio_tag("#{@song.songurl}", id: "audioplayer") %>
 	</div>

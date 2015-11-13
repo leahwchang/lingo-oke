@@ -26,9 +26,9 @@ html {
 }
 
 body {
-  background: #FF686B;
+  background: #9C528B;
   background-image: url("mic.png") no-repeat center center fixed;
-  background: url("mic.png") no-repeat center center fixed, linear-gradient(#FF6B6B, #71CFC2);
+  background: url("mic.png") no-repeat center center fixed, linear-gradient(#9C528B, #25CED1);
   width: 100%;
   height: 100%;
 	margin: 0 0 80px; // bottom = footer height
@@ -49,8 +49,8 @@ h1 {
 }
 
 #logo {
-	width: 7%;
-	height: 7%;
+	width: 6%;
+	height: 6%;
 	margin-left: 80px;
 	float: left;
 	background-color: white;
@@ -65,7 +65,7 @@ h1 {
 #menu1 {
 	border: 1px solid #ccc;
 	border-radius: 0px;
-	color: #FF6B6B;
+	color: #25CED1;
 }
 
 .dropdown-menu {
@@ -75,7 +75,7 @@ h1 {
 
 #menulinks {
 	z-index: 100000;
-	color: #71CFC2;
+	color: #9C528B;
 }
 /*********** header ***********/
 
@@ -124,11 +124,11 @@ h1 {
 }
 
 .maincontainer {
-	border: 1px solid black;
-	background-color: #ccc;
+	// border: 1px solid black;
+	background-color: #bdc3c7;
 	width: 500px;
 	margin: 0 auto;
-	opacity: 0.85;
+	opacity: 0.9;
 	border-radius: 10px;
 	text-align: center;
 	padding-bottom: 30px;

@@ -1,9 +1,11 @@
 <div class="maincontainer">
+	</br>
 	<h1>Hello! <%= @user.fname %></h1>
-		<h2><%= @user.fname %>'s Profile</h2>
+		<!-- <h2><%# @user.fname %>'s Profile</h2> -->
+		</br>
 			<% if @user.fname && @user.lname %>
 				<%= @user.fname + " " + @user.lname%>
-				<%= @user.birthday %>
+				<%# @user.birthday %>
 			<% end %>
 			<br>
 			<br>

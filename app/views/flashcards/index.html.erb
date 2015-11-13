@@ -1,5 +1,5 @@
 <div class="maincontainer">
-
+	</br>
 	<h1><%= @song.songname %> Flashcards</h1>
 
 	<div class="fcontainer">
@@ -17,6 +17,10 @@
 			  </div>
 			</div>
 	  <% end %>
+	</div>
+	</br>
+	<div class="pagelinks">
+		<%= link_to 'BACK', language_song_path(@language, @song) %>
 	</div>
 
 </div>
