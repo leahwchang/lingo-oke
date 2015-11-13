@@ -11,132 +11,67 @@
  // *
  // *= require_self
  // */
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
-@import "bourbon";
-@import "songs";
-@import "homes";
-@import "languages";
-@import "flashcards";
+@import 'bourbon';
+@import 'homes';
+@import 'flashcards';
+@import 'songs';
+@import 'languages';
 
 html {
     position: relative;
     min-height: 100%;
 }
 
-// body {
-// 	margin: 0 0 100px; // bottom = footer height
-// }
+body {
+	margin: 0 0 100px; // bottom = footer height
+}
 
 /*********** header ***********/
 
-*{
-  padding: 0;
-  margin: 0;
-  font-family: 'Lato', sans-serif;
-  box-sizing: border-box;
-}
-.float-right{
-  float: right;
-}
-.fa{
- font-size: .8em;
-  line-height: 22px !important;
-}
-dropdown{
-   display: inline-block;
-   margin: 20px 50px; 
-}
-dropdown label, dropdown ul li{
-  display: block;
-  width: 200px;
-  background: #ECF0F1;
-  padding: 15px 20px;
-}
-dropdown label:hover, dropdown ul li:hover{
-  background: #1ABC9C;
-  color: white;
-  cursor: pointer;
-}
-dropdown label{
-  color: #1ABC9C;
-  border-left: 4px solid #1ABC9C;
-  border-radius: 0 5px 0 0; 
-  position: relative;
-  z-index: 2;
-}
-dropdown input{
-  display: none;
-}
-dropdown input ~ ul{
-  position: relative;
-  visibility: hidden;
-  opacity: 0;
-  top: -20px;
-  z-index: 1;
-}
-dropdown input:checked + label{
-  background: #1ABC9C;
-  color: white;
+.header {
+	width: 101%;
+	height: 100px;
+	border: 1px solid black;
+	background-color: white;
 }
 
-dropdown input:checked ~ ul{
-  visibility: visible;
-  opacity: 1;
-  top: 0;
-}
-$colors: #E74C3C, #0072B5, #2C3E50;
-
-@for $i from 1 through length($colors) {
-  dropdown ul li:nth-child(#{$i}) {
-    border-left: 4px solid nth($colors, $i);
-    .fa{
-      color: nth($colors, $i);
-    }
-    &:hover {
-        background: nth($colors, $i);
-        color: white;
-      .fa{
-        color: white; 
-      }
-    }
-  }
+#logo {
+	width: 200px;
+	height: 90px;
+	margin-left: 15px;
+	margin-top: 4px;
+	float: left;
+	border: 1px solid black;
+	background-color: white;
 }
 
-.animate{
-  -webkit-transition: all .3s;
-  -moz-transition: all .3s;
-  -ms-transition: all .3s;
-  -ms-transition: all .3s;
-  transition: all .3s;  
-  backface-visibility:hidden;
-  -webkit-backface-visibility:hidden; /* Chrome and Safari */
-  -moz-backface-visibility:hidden; /* Firefox */
-  -ms-backface-visibility:hidden; /* Internet Explorer */
+.dropdown {
+	margin-top: 30px;
+	margin-left: 20px;
+	float: left;
 }
 
-// .logosmall img {
-// 	margin-top: 5px;
-// 	margin-left: 20px;
-// 	width: 10%;
-// 	height: 10%;
-// 	// border: 1px solid black;
-// 	float: left;
-// }
-
-
+#menu1 {
+	border: 1px solid black;
+	border-radius: 0px;
+}
 /*********** header ***********/
 
 /*********** notifications ***********/
 
 .notifications {
-	// border: 1px solid black;
+	border: 1px solid black;
 	width: 100%;
 	height: 50px;
 }
 
 .notifications p {
+	margin-top: -23px;
 	display: inline-block;
-	margin-left: 15px;
+	// margin-left: 15px;
 }
 
 /*********** notifications ***********/
@@ -144,7 +79,7 @@ $colors: #E74C3C, #0072B5, #2C3E50;
 /*********** main ***********/
 
 .main {
-	// border: 1px solid black;
+	border: 1px solid black;
 	width: 85%;
 	margin: 0 auto;
 	clear: both;
@@ -160,8 +95,9 @@ $colors: #E74C3C, #0072B5, #2C3E50;
   bottom: 0;
   height: 80px;
   width: 100%;
-  // border: 1px solid black;
+  border: 1px solid black;
 	background-color: white;
+	clear: both;
 }
 
 /*********** footer **********/
