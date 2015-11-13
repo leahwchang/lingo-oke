@@ -1,0 +1,55 @@
+// Place all the styles related to the Flashcards controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.fcontainer {
+	border: 1px solid red;
+	width: 520px;
+	height: 600px;
+	.card {
+		border: 1px solid black;
+		width: 250px;
+		height: 250px;
+		float: left;
+		position: relative;
+		.ffront {
+			border: 1px solid blue;
+			width: 120px;
+			height: 120px;
+			position: absolute;
+		}
+		.fback {
+			border: 1px solid red;
+			width: 120px;
+			height: 120px;
+			position: absolute;
+		}
+	}
+}
+			.ffront, .fback {
+			-webkit-backface-visibility: hidden;
+			back-face-visibility: hidden;
+			-webkit-transition: -webkit-transform 0.3s;
+			transition: transform 0.3s;
+}
+
+			.fback {
+      // back
+      			background-color: red;
+			-webkit-transform: rotateY(-180deg);
+			transform: rotateY(-180deg);
+		}
+
+.ffront {
+				background-color: blue;
+}
+
+.card.effect__click.flipped .ffront {
+	-webkit-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+}
+
+.card.effect__click.flipped .fback {
+	-webkit-transform: rotateY(0);
+	transform: rotateY(0);
+}

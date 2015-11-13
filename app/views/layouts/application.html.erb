@@ -11,18 +11,23 @@
 	<div class="header"> <!-- header -->
 		<header>
 			<nav>
-				<% if user_signed_in? %>
-					<div class="logosmall">
-						<img src="/assets/logo-small.png">
-					</div>
-					<%= link_to 'sign out', destroy_user_session_path, method: :delete %>
-				<% else %>
-					<%= link_to 'sign in', new_user_session_path %>
-					<%= link_to 'sign up', new_user_registration_path %>
-				<% end %>
-			</nav>
-		</header> 
-	</div> <!-- header -->
+				<div id="logo">
+					LOGO
+				</div>
+
+<div id="dropdown" class="ddmenu">
+      User Settings
+      <ul>
+        <li><a href="#">My Profile</a></li>
+        <li><a href="#">Friend Requests</a></li>
+        <li><a href="#">Account Settings</a></li>
+        <li><a href="#">Support</a></li>
+        <li><a href="#">Log Out</a></li>
+      </ul>
+    </div>
+
+</nav>
+</header>
 
 	<div class="notifications"> <!-- notifications -->
 		<p>notifications</p>

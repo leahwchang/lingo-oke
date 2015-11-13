@@ -170,7 +170,3 @@ function pauseAll() {
 	pauseLyrics();
 	pauseAnimations();
 }
-
-// function pauseAll( ) {
-
-// } 
