@@ -6,6 +6,37 @@
 // 	background-color: #5CB7F2;
 // }
 
+.homecontainer {
+	margin: 0 auto;
+	// border: 1px solid black;
+	width: 90%;
+	height: 90%;
+}
+
+.tagline {
+	// border: 1px solid black;
+	// padding-top: 1px;
+	// background-color: white;
+	// width: 565px;
+	// height: 50px;
+	margin: 0 auto;
+	opacity: 0.9;
+	border-radius: 10px;
+	text-align: center;
+	h1 {
+		color: #FAF3DD;
+		text-shadow: 
+		2px 2px 0px #AED9E0,
+		-2px -2px 0px #AED9E0,
+		2px -2px 0px #AED9E0,
+		-2px 2px 0px #AED9E0,
+		0px 2px 0px #AED9E0,
+		2px 0px 0px #AED9E0,
+		0px -2px 0px #AED9E0,
+		-2px 0px 0px #AED9E0;
+	}
+}
+
 .logohome {
 	margin: 0 auto;
 	// border: 1px solid red;
