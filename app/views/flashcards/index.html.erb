@@ -1,18 +1,18 @@
 <div class="maincontainer">
 
-	<h1><%= @song.songname %> Flashcards#index</h1>
+	<h1><%= @song.songname %> Flashcards</h1>
 
 	<div class="fcontainer">
 		<% @song.flashcards.each_with_index do |flashcard, index| %>
 			<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
 			  <div class="flipper">
 			    <div class="front">
-			      <p>id: <%= "flashcard_#{index}" %></p>
-						<p>back: <%= flashcard.bvocab %></p>
+			      <h2 style="font-weight: bold; border-bottom: 1px solid #E9A0A9"><%= flashcard.bvocab %></h2>
+						<p><%= flashcard.bextra %></p>
 			    </div>
 			    <div class="back">
-			      <p>id: <%= "flashcard_#{index}" %></p>
-						<p>front: <%= flashcard.fvocab %></p>
+			      <h2 style="border-bottom: 1px solid #E9A0A9"><%= flashcard.fvocab %></h2>
+						<p><%= flashcard.fextra %></p>
 			    </div>
 			  </div>
 			</div>
