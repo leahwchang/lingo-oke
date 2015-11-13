@@ -57,6 +57,9 @@
   transform: rotateY(0deg);
   border: 1px solid #E9E7E7;
   background-color: #F9F7F7;
+  h2 {
+    color: #A6D0D8;
+  }
 }
 
 /* back, initially hidden pane */
@@ -64,4 +67,7 @@
   transform: rotateY(180deg);
   border: 1px solid #E9E7E7;
   background-color: #F9F7F7;
+  h2 {
+    color: #A6D0D8;
+  }
 }
