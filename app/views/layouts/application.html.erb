@@ -11,36 +11,49 @@
 	<div class="header"> <!-- header -->
 		<header>
 			<nav>
-				<div id="logo">
-					<img src="/assets/logo-small.png">
-				</div>
+				<% if user_signed_in? %>
+					<div id="logo">
+						<img src="/assets/logo-small.png">
+					</div>
+				<% end %>
 			  <div class="dropdown">
-			    <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">MENU
-			    <span class="caret"></span>
+			    <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">MENU <span class="caret"></span>
 				  </button>
 			    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+			    	<% if user_signed_in? %>
+			    		<li role="presentation">
+				      	<a role="menuitem" tabindex="-1" href="#">
+				      		<%= link_to 'HOME', languages_path %>
+				      	</a>
+				      </li>
+				      <li role="presentation">
+				      	<a role="menuitem" tabindex="-1" href="#">
+				      		<%= link_to 'PROFILE', user_path(current_user.id) %>
+				      	</a>
+				      </li>
+			    		<li role="presentation" class="divider"></li> <!-- divider -->
+				      <li role="presentation">
+				      	<a role="menuitem" tabindex="-1" href="#">
+				      		<%= link_to 'SIGN OUT', destroy_user_session_path, method: :delete %>
+				      	</a>
+				      </li>
+			      <% else %>
 			      <li role="presentation">
 			      	<a role="menuitem" tabindex="-1" href="#">
-			      		<%= link_to 'sign out', destroy_user_session_path, method: :delete %>
+			      		<%= link_to 'SIGN IN', new_user_session_path %>
 			      	</a>
 			      </li>
 			      <li role="presentation">
 			      	<a role="menuitem" tabindex="-1" href="#">
-			      		<%= link_to 'sign in', new_user_session_path %>
+			      		<%= link_to 'SIGN UP', new_user_registration_path %>
 			      	</a>
 			      </li>
-			      <li role="presentation">
-			      	<a role="menuitem" tabindex="-1" href="#">
-			      		<%= link_to 'sign up', new_user_registration_path %>
-			      	</a>
-			      </li>
-			      <li role="presentation" class="divider"></li>
-
+			      <% end %>
 			    </ul>
 			  </div>
 			</nav>
 		</header>
-	</div>
+	</div> <!-- header -->
 
 	<div class="notifications"> <!-- notifications -->
 		<p class="notice"><%= notice %></p>
@@ -52,6 +65,9 @@
 			<%= yield %>
 		</main>
 	</div> <!-- main -->
+	
+	<div class="cleardiv">
+	</div>
 
 	<div class="footer"> <!-- footer -->
 		<footer> 

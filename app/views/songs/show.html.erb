@@ -1,47 +1,50 @@
-<h1>Songs#show</h1>
-<p>Find me in app/views/songs/show.html.erb</p>
-<h1>
-	<%= @song.songname %>
-</h1>
+<div class="songcontainer">
 
-<!-- listing exercises -->
-<div class="exercises">
-	<div class="ex1">
-		<p>exercise name</p>
+	<h1>Songs#show</h1>
+	
+	<h1>
+		<%= @song.songname %>
+	</h1>
+
+	<!-- listing exercises -->
+	<div class="exercises">
+		<div class="ex1">
+			<p>exercise name</p>
+		</div>
+
+		<div class="ex1">
+			<p>exercise name</p>
+		</div>
+
+		<div class="ex1">
+			<p>exercise name</p>
+		</div>
+	</div>
+	<!-- listing exercises -->
+
+	<div>
+		<%= audio_tag("#{@song.songurl}", id: "audioplayer") %>
 	</div>
 
-	<div class="ex1">
-		<p>exercise name</p>
+	<div class="songanimation">
+		<div class="animation">
+			<% @song.images.each_with_index do |image, index| %>
+				<div>
+					<%= image_tag("#{image.imageurl}", id: "image_#{index}") %>
+				</div>
+			<% end %>
+		</div>
 	</div>
 
-	<div class="ex1">
-		<p>exercise name</p>
+	<div class="buttons">
+		<button onclick="playAll()" type="button">Play</button>
+		<button onclick="pauseAll()" type="button">Stop</button><br> 
 	</div>
-</div>
-<!-- listing exercises -->
 
-<div>
-	<%= audio_tag("#{@song.songurl}", id: "audioplayer") %>
-</div>
-
-<div class="songanimation">
-	<div class="animation">
-		<% @song.images.each_with_index do |image, index| %>
-			<div>
-				<%= image_tag("#{image.imageurl}", id: "image_#{index}") %>
-			</div>
-		<% end %>
+	<div class="footnote">
+		<div id="footnote1"></div>
+		<div id="footnote2"></div>
+		<div id="footnote3"></div>
 	</div>
-</div>
 
-<div class="buttons">
-	<button onclick="playAll()" type="button">Play</button>
-	<button onclick="pauseAll()" type="button">Stop</button><br> 
 </div>
-
-<div class="footnote">
-	<div id="footnote1"></div>
-	<div id="footnote2"></div>
-	<div id="footnote3"></div>
-</div>
-

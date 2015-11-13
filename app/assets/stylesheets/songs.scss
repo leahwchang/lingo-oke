@@ -2,6 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.songcontainer {
+	border: 1px solid black;
+	background-color: #ccc;
+	width: 650px;
+	margin: 0 auto;
+	opacity: 0.85;
+	border-radius: 10px;
+	text-align: center;
+	padding-bottom: 30px;
+}
+
 .songanimation {
 	margin: 0 auto;
 	width: 555px;
@@ -19,15 +30,16 @@
 			height: 412px;
 			border: 1px solid white;
 			position: absolute;
+			margin-left: -245px;
 		}
 		// background: clouds
 		#image_1 {
 			margin: 0 auto;
-			margin-top: 25px;
+			margin-top: -120px;
 			width: 510px;
 			height: 116px;
 			position: relative;
-			display: block;
+			// display: block;
 		}
 		// first characters
 		#image_2 {
@@ -38,16 +50,16 @@
 			margin: 0 auto;
 			top: 20px;
 			z-index: 1;
-			display: block;
+			// display: block;
 		}
 		// background: grass
 		#image_3 {
 			margin-top: -90px;
-			margin-left: -4px;
+			margin-left: -278px;
 			width: 556px;
 			height: 134px;
 			position: absolute;
-			display: block;
+			// display: block;
 		}
 	}
 }
@@ -65,24 +77,24 @@
 	margin: 0 auto;
 	border: 1px solid black;
 	height: 200px;
-	width: 350px;
+	width: 500px;
 	#footnote1 {
 		margin: 0 auto;
 		border: 1px solid black;
 		height: 65px;
-		width: 340px;
+		width: 90%;
 	}
 	#footnote2 {
 		margin: 0 auto;
 		border: 1px solid black;
 		height: 65px;
-		width: 340px;
+		width: 90%;
 	}
 	#footnote3 {
 		margin: 0 auto;
 		border: 1px solid black;
 		height: 65px;
-		width: 340px;
+		width: 90%;
 	}
 }
 
