@@ -1,5 +1,11 @@
 <div class="maincontainer">
-
-	<h1>Users#show</h1>
-
+	<h1>Hello! <%= @user.fname %></h1>
+		<h2><%= @user.fname %>'s Profile</h2>
+			<% if @user.fname && @user.lname %>
+				<%= @user.fname + " " + @user.lname%>
+				<%= @user.birthday %>
+			<% end %>
+			<br>
+			<br>
+			<%= link_to 'Update Profile', edit_user_registration_path %>
 </div>

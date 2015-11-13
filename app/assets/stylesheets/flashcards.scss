@@ -3,53 +3,62 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .fcontainer {
-	border: 1px solid red;
-	width: 520px;
-	height: 600px;
-	.card {
-		border: 1px solid black;
-		width: 250px;
-		height: 250px;
-		float: left;
-		position: relative;
-		.ffront {
-			border: 1px solid blue;
-			width: 120px;
-			height: 120px;
-			position: absolute;
-		}
-		.fback {
-			border: 1px solid red;
-			width: 120px;
-			height: 120px;
-			position: absolute;
-		}
-	}
-}
-			.ffront, .fback {
-			-webkit-backface-visibility: hidden;
-			back-face-visibility: hidden;
-			-webkit-transition: -webkit-transform 0.3s;
-			transition: transform 0.3s;
+	border: 1px solid black;
+	width: 473px;
+	height: 300px;
+	margin: 0 auto;
 }
 
-			.fback {
-      // back
-      			background-color: red;
-			-webkit-transform: rotateY(-180deg);
-			transform: rotateY(-180deg);
-		}
+/* entire container, keeps perspective */
+.flip-container {
+	margin-top: 10px;
+	margin-left: 10px;
+	float: left;
+  perspective: 1000;
+  /*border: 1px solid black;*/
+}
+  /* flip the pane when hovered */
+  .flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+  }
 
-.ffront {
-				background-color: blue;
+.flip-container, .front, .back {
+  width: 220px;
+  height: 100px;
+  /*border: 1px solid black;*/
 }
 
-.card.effect__click.flipped .ffront {
-	-webkit-transform: rotateY(-180deg);
-	transform: rotateY(-180deg);
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  /*border: 1px solid black;*/
+  width: 220px;
+  height: 100px;
+  position: relative;
 }
 
-.card.effect__click.flipped .fback {
-	-webkit-transform: rotateY(0);
-	transform: rotateY(0);
+/* hide back of pane during swap */
+.front, .back {
+  backface-visibility: hidden;
+  /*border: 1px solid black;*/
+  width: 220px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+  background-color: red;
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
+  background-color: blue;
 }
