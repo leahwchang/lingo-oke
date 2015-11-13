@@ -17,10 +17,11 @@
   perspective: 1000;
   /*border: 1px solid black;*/
 }
-  /* flip the pane when hovered */
-  .flip-container:hover .flipper, .flip-container.hover .flipper {
-    transform: rotateY(180deg);
-  }
+
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+  transform: rotateY(180deg);
+}
 
 .flip-container, .front, .back {
   width: 220px;
@@ -54,11 +55,13 @@
   z-index: 2;
   /* for firefox 31 */
   transform: rotateY(0deg);
-  background-color: #EFECEB;
+  border: 1px solid #E9E7E7;
+  background-color: #F9F7F7;
 }
 
 /* back, initially hidden pane */
 .back {
   transform: rotateY(180deg);
-  background-color: #EFECEB;
+  border: 1px solid #E9E7E7;
+  background-color: #F9F7F7;
 }

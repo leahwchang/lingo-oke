@@ -7,8 +7,8 @@
 	background-color: transparent !important;
 	box-shadow:none !important;
 	.panel-heading {
-		border: 3px solid #25CED1 !important;
-		background-color: #9C528B !important;
+		border: 4px solid #AED9E0;
+		background-color: #FAF3DD;
 		width: 120px;
 		height: 120px;
 		border-radius: 10px;
@@ -17,8 +17,8 @@
 		text-align: center;
 	}
 	.panel-body {
-		border: 3px solid #9C528B !important;
-		background-color: #25CED1;
+		border: 4px solid #FAF3DD;
+		background-color: #AED9E0;
 		width: 70px;
 		height: 70px;
 		border-radius: 10px;
@@ -28,11 +28,11 @@
 }
 
 .panel-title {
-	color: black;
+	color: #AED9E0;
 	font-family: 'Lilita One', cursive;
 }
 
 .panel-body a {
-	color: black;
+	color: #FAF3DD;
 	font-family: 'Lilita One', cursive;
 }

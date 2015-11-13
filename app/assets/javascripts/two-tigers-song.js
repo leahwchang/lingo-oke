@@ -60,7 +60,7 @@ function playMandarin() {
 
 	var cc = 0;
 	function nextMandarin() {
-    $('#p1'+cc).css("color", "#FFC84B");
+    $('#p1'+cc).css("color", "#FFA69E");
     cc++;
     if(cc > verse1.length-1) return;
     window.setTimeout(nextMandarin, verse1[cc-1][1]);
@@ -86,7 +86,7 @@ function playPinYin() {
 
 	var dd = 0;
 	function nextPinYin() {
-    $('#p2'+dd).css("color", "#FFC84B");
+    $('#p2'+dd).css("color", "#FFA69E");
     dd++;
     if(dd > verse2.length-1) return;
     window.setTimeout(nextPinYin, verse2[dd-1][1]);
@@ -112,7 +112,7 @@ function playEnglish() {
 
 	var ff = 0;
 	function nextEnglish() {
-    $('#p3'+ff).css("color", "#FFC84B");
+    $('#p3'+ff).css("color", "#FFA69E");
     ff++;
     if(ff > verse3.length-1) return;
     window.setTimeout(nextEnglish, verse3[ff-1][1]);
