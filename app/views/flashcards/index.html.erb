@@ -1,0 +1,21 @@
+<div class="maincontainer">
+
+	<h1>Flashcards#index</h1>
+	<p>Find me in app/views/flashcards/index.html.erb</p>
+
+	<div class="fcontainer">
+		<% @song.flashcards.each_with_index do |flashcard, index| %>
+			<div class="card effect__click">
+				<div class="fback">
+					<p>id: <%= "flashcard_#{index}" %></p>
+					<p>back: <%= flashcard.bvocab %></p>
+				</div>
+				<div class="ffront">
+					<p>id: <%= "flashcard_#{index}" %></p>
+					<p>front: <%= flashcard.fvocab %></p>
+				</div>
+			</div>
+		<% end %>
+	</div>
+
+</div>

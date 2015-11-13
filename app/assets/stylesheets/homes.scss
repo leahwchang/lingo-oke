@@ -2,9 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+	background-color: #5CB7F2;
+}
+
 .logohome {
-	border: 1px solid black;
-	width: 600px;
-	height: 344px;
 	margin: 0 auto;
+	// border: 1px solid red;
+	width: 80%;
+	height: 80%;
+}
+
+img {
+	// border: 1px solid black;
+	width: 100%;
+	height: 100%;
 }

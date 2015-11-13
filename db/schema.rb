@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151104230422) do
+ActiveRecord::Schema.define(version: 20151112171747) do
+
+  create_table "flashcards", force: :cascade do |t|
+    t.integer "language_id"
+    t.integer "song_id"
+    t.string  "fvocab"
+    t.string  "fextra"
+    t.string  "bvocab"
+    t.string  "bextra"
+  end
 
   create_table "images", force: :cascade do |t|
     t.integer "song_id"
