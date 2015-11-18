@@ -46,4 +46,9 @@
 		<%= link_to 'BACK', languages_path %>
 	</div>
 
+	<% if current_user %>
+	  <%= link_to "favorite", favorite_language_song_path(@language, @song, type: "favorite"), method: :put %>
+	  <%= link_to "unfavorite", favorite_language_song_path(@language, @song, type: "unfavorite"), method: :put %>
+	<% end %>
+
 </div>

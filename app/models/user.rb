@@ -5,6 +5,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :songs
-  has_many :likes
-  has_many :liked_songs, through: :likes, source: "song"
+
+  # favorite songs of user
+  has_many :favorite_songs # the relationship
+  has_many :favorites, through: :favorite_songs, source: :song # the actual songs a user favorites
+
 end
