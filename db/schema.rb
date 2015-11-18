@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151112171747) do
+ActiveRecord::Schema.define(version: 20151118205540) do
 
   create_table "flashcards", force: :cascade do |t|
     t.integer "language_id"
@@ -30,6 +30,13 @@ ActiveRecord::Schema.define(version: 20151112171747) do
 
   create_table "languages", force: :cascade do |t|
     t.string "langname"
+  end
+
+  create_table "likes", force: :cascade do |t|
+    t.integer  "song_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "songs", force: :cascade do |t|

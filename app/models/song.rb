@@ -3,5 +3,6 @@ class Song < ActiveRecord::Base
 	has_many :translations
 	has_many :images
 	has_many :flashcards
-
+	has_many :likes
+	has_many :users, through: :likes
 end

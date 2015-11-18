@@ -33,6 +33,14 @@ class SongsController < ApplicationController
     @song = Song.new
   end
 
+  def like
+
+  end
+
+  def unlike
+    
+  end
+
   private
 
   def set_song

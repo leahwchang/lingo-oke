@@ -6,11 +6,33 @@
 	// border: 1px solid black;
 	background-color: white;
 	width: 650px;
+	height: 1100px;
 	margin: 0 auto;
 	opacity: 0.9;
 	border-radius: 10px;
 	text-align: center;
 	padding-bottom: 30px;
+	.pagelinks1 {
+		width: 120px;
+		height: 30px;
+		margin: 0 auto;
+		margin-top: 80px;
+		border: 2px solid #A6D0D8;
+		border-radius: 15px;
+		padding: 2px;
+		color: #A6D0D8;
+		background-color: #FCF6E0;
+		text-decoration: none;
+		display: inline-block;
+		a {
+			text-decoration: none;
+			color: #A6D0D8;
+		}
+		a:hover {
+			text-decoration: none;
+			color: #A6D0D8;
+		}
+	}
 }
 
 .songanimation {
@@ -77,6 +99,9 @@
 	// border: 1px solid black;
 	height: 300px;
 	width: 550px;
+	h4 {
+		text-align: left;
+	}
 	#footnote1 {
 		margin: 0 auto;
 		border: 1px solid #AED9E0;
