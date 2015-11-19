@@ -32,9 +32,23 @@
 	</br>
 
 	<div class="footnote">
+		<h4>Mandarin</h4>
 		<div id="footnote1"></div>
+		<h4>PinYin</h4>
 		<div id="footnote2"></div>
+		<h4>English</h4>
 		<div id="footnote3"></div>
 	</div>
+
+	</br>
+
+	<div class="pagelinks1">
+		<%= link_to 'BACK', languages_path %>
+	</div>
+
+	<% if current_user %>
+	  <%= link_to "favorite", favorite_language_song_path(@language, @song, type: "favorite"), method: :put %>
+	  <%= link_to "unfavorite", favorite_language_song_path(@language, @song, type: "unfavorite"), method: :put %>
+	<% end %>
 
 </div>

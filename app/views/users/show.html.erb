@@ -1,15 +1,19 @@
 <div class="maincontainer">
 	</br>
 	<h1>Hello! <%= @user.fname %></h1>
-		<!-- <h2><%# @user.fname %>'s Profile</h2> -->
 		</br>
 			<% if @user.fname && @user.lname %>
 				<%= @user.fname + " " + @user.lname%>
-				<%# @user.birthday %>
 			<% end %>
 			<br>
 			<br>
-		<div class="pagelinks">
-			<%= link_to 'Update Profile', edit_user_registration_path %>
-		</div>
+	<div>
+		<h2>Favorited Songs</h2>
+		<% @favorite_songs.each do |favorite_song| %>
+			<p><%= favorite_song.song.songname %></p>
+		<% end %>
+	</div>
+	<div class="pagelinks">
+		<%= link_to 'Update Profile', edit_user_registration_path %>
+	</div>
 </div>

@@ -46,20 +46,24 @@ function pauseAudio() {
 function playMandarin() {
 	var verse1;
   verse1 = [ // [text, duration]
-    [[split1[0]], 400], [[split1[1]], 400], [[split1[2]], 400], [[split1[3]], 400], [[split1[4]], 100], [[split1[5]], 400], [[split1[6]], 400], [[split1[7]], 400], [[split1[8]], 400], [[split1[9]], 100], [[split1[10]], 400], [[split1[11]], 400], [[split1[12]], 800], [[split1[13]], 100], [[split1[14]], 400], [[split1[15]], 400], [[split1[16]], 800], [[split1[17]], 100], [[split1[18]], 200], [[split1[19]], 200], [[split1[20]], 200], [[split1[21]], 200], [[split1[22]], 400], [[split1[23]], 400], [[split1[24]], 100], [[split1[25]], 200], [[split1[26]], 200], [[split1[27]], 200], [[split1[28]], 200], [[split1[29]], 400], [[split1[30]], 400], [[split1[31]], 100], [[split1[32]], 400], [[split1[33]], 400], [[split1[34]], 800], [[split1[35]], 100], [[split1[36]], 400], [[split1[37]], 400], [[split1[38]], 800]
-  ];
+    [[split1[0]], 390], [[split1[1]], 390], [[split1[2]], 390], [[split1[3]], 390], [[split1[4]], 100], [[split1[5]], 390], [[split1[6]], 390], [[split1[7]], 390], [[split1[8]], 390], [[split1[9]], 100], [[split1[10]], 400], [[split1[11]], 400], [[split1[12]], 800], [[split1[13]], 100], [[split1[14]], 400], [[split1[15]], 400], [[split1[16]], 800], [[split1[17]], 100], [[split1[18]], 200], [[split1[19]], 200], [[split1[20]], 200], [[split1[21]], 200], [[split1[22]], 400], [[split1[23]], 400], [[split1[24]], 100], [[split1[25]], 200], [[split1[26]], 200], [[split1[27]], 200], [[split1[28]], 200], [[split1[29]], 400], [[split1[30]], 400], [[split1[31]], 100], [[split1[32]], 400], [[split1[33]], 400], [[split1[34]], 800], [[split1[35]], 100], [[split1[36]], 400], [[split1[37]], 400], [[split1[38]], 800]
+  ]; // split verse and hardcode duration
 
   var text1="";
   $.each(verse1, function(a, b) {
     text1 += "<span id='p1"+a+"'>" + b[0] + "</span> ";
-  });
+  }); // grab above split/timed verse and place each into its own span
   
-  $('#footnote1').html(text1);
+  $('#footnote1').html(text1); // write the span'd texts into div footnote1
   cc=0;
-  nextMandarin();
+  nextMandarin(); // cue the nextMandarin() function
 
+  // as the word count is going
+  // add new word count 
+  // add css style color #FFA69E to each new split/timed span
+  // colored word comes out one after the other
 	var cc = 0;
-	function nextMandarin() {
+	function nextMandarin() { 
     $('#p1'+cc).css("color", "#FFA69E");
     cc++;
     if(cc > verse1.length-1) return;
@@ -124,23 +128,28 @@ var l1;
 var l2;
 var l3;
 
+
 function playLyrics() {
-  l1 = setTimeout(playMandarin, 7750);
+  l1 = setTimeout(playMandarin, 7750); // delay the karaoke texts by close to 8 seconds
   l2 = setTimeout(playPinYin, 7750);
   l3 = setTimeout(playEnglish, 7750);
 }
 
-function pauseLyrics() {
-	clearTimeout(l1);
-	clearTimeout(l2);
-	clearTimeout(l3);
-}
+// function pauseLyrics() {
+// 	clearTimeout(l1);
+// 	clearTimeout(l2);
+// 	clearTimeout(l3);
+// }
 
 //////// images - animations ////////
 function playPictures() {
+  // animate clouds left for 10px for 1 second
+  // then animate right for 10px for 1 second
   $('#image_1').stop(true, true).animate({ left: '-10px' }, 1000, function() {
     $('#image_1').stop(true, true).animate({ left: '20px' }, 1000);
   });
+  // animate tigers top for 10px for 1 second
+  // animate tigers down for 20px for 1 second
   $('#image_2').stop(true, true).animate({ top: '10px' }, 1000, function() {
     $('#image_2').stop(true, true).animate({ top: '-10px' }, 1000 );
   });

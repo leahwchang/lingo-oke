@@ -149,6 +149,11 @@ h4 {
 	font-family: 'Lilita One', cursive;
 }
 
+h3 {
+	color: #AED9E0;
+	font-family: 'Lilita One', cursive;
+}
+
 /*********** main ***********/
 
 /*********** buttons ***********/
@@ -176,6 +181,7 @@ h4 {
 	color: #A6D0D8;
 	background-color: #FCF6E0;
 	text-decoration: none;
+	display: inline-block;
 	a {
 		text-decoration: none;
 		color: #A6D0D8;
@@ -184,6 +190,13 @@ h4 {
 		text-decoration: none;
 		color: #A6D0D8;
 	}
+}
+
+.maincontainer input[type=submit] {
+    background-color: #FCF6E0;
+  	border-radius: 15px;
+  	border: 2px solid #A6D0D8;
+  	color: #A6D0D8;
 }
 
 /*********** buttons ***********/

@@ -11,7 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151112171747) do
+ActiveRecord::Schema.define(version: 20151118225446) do
+
+  create_table "favorite_songs", force: :cascade do |t|
+    t.integer "song_id"
+    t.integer "user_id"
+  end
 
   create_table "flashcards", force: :cascade do |t|
     t.integer "language_id"
