@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'font-awesome-sass'
 gem 'aws-sdk', '< 2.0'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'bourbon'

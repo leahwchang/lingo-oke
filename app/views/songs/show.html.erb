@@ -5,22 +5,25 @@
 	</h1>
 	</br>
 
-<!-- 	<div class="pagelinks1"> -->
-		<button onclick="playAll()" type="button">PLAY</button>
-		<!-- <button onclick="pauseAll()" type="button">Stop</button> -->
+	<!-- 	<div class="pagelinks1"> -->
+	<button onclick="playAll()" type="button">PLAY</button>
+	<!-- <button onclick="pauseAll()" type="button">Stop</button> -->
 	<!-- </div> -->
 
-	<% if current_user %>
-	  <%= link_to "favorite", favorite_language_song_path(@language, @song, type: "favorite"), method: :put, class: "pagelinks1" %>
-	  <%= link_to "unfavorite", favorite_language_song_path(@language, @song, type: "unfavorite"), method: :put, class: "pagelinks1" %>
-	<% end %>
-
-	<div class="pagelinks1" type="button">
-		<%= link_to 'BACK', languages_path %>
-	</div>
+	<!-- favorite/unfavorite button -->
+  <% if current_user.favorites.include? @song %>
+    <%= link_to icon('heart'), favorite_language_song_path(@language, @song, type: "unfavorite"), method: :put, class: "pagelinks2" %>
+  <% end %>
+  <% if current_user.favorites.exclude? @song %>
+    <%= link_to icon('heart-o'), favorite_language_song_path(@language, @song, type: "favorite"), method: :put, class: "pagelinks2" %>
+  <% end %>
 
 	<div class="pagelinks1" type="button">
 		<%= link_to 'FLASHCARDS', language_song_flashcards_path(@language, @song)%>
+	</div>
+
+	<div class="pagelinks2" type="button">
+		<%= link_to 'BACK', languages_path %>
 	</div>
 
 	<div>

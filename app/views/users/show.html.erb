@@ -10,9 +10,10 @@
 	<div>
 		<h2>Favorited Songs</h2>
 		<% @favorite_songs.each do |favorite_song| %>
-			<p><%= favorite_song.song.songname %></p>
+			<div class="pagelinks"><p><i class="fa fa-heart"></i> <%= link_to "#{favorite_song.song.songname}", language_song_path(favorite_song.song.language.id, favorite_song.song.id) %></p></div>
 		<% end %>
 	</div>
+	</br>
 	<div class="pagelinks">
 		<%= link_to 'Update Profile', edit_user_registration_path %>
 	</div>
