@@ -2,11 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.flashcontainer {
+  // border: 1px solid black;
+  background-color: white;
+  width: 800px;
+  // height: 650px;
+  margin: 0 auto;
+  // margin-left: 20px;
+  opacity: 0.9;
+  border-radius: 10px;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
 .fcontainer {
 	// border: 1px solid black;
-	width: 473px;
-	height: 600px;
+  // margin-top: 50px;
+	width: 700px;
+	height: 350px;
 	margin: 0 auto;
+  margin-top: 10px;
 }
 
 /* entire container, keeps perspective */

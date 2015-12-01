@@ -1,6 +1,10 @@
-<div class="maincontainer">
+<div class="flashcontainer">
 	</br>
 	<h1><%= @song.songname %> Flashcards</h1>
+
+	<div class="pagelinks">
+		<%= link_to 'BACK', language_song_path(@language, @song) %>
+	</div>
 
 	<div class="fcontainer">
 		<% @song.flashcards.each_with_index do |flashcard, index| %>
@@ -19,9 +23,7 @@
 	  <% end %>
 	</div>
 	</br>
-	<div class="pagelinks">
-		<%= link_to 'BACK', language_song_path(@language, @song) %>
-	</div>
+
 
 </div>
 

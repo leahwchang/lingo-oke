@@ -5,18 +5,27 @@
 .songcontainer {
 	// border: 1px solid black;
 	background-color: white;
-	width: 650px;
-	height: 1100px;
+	width: 1090px;
+	height: 650px;
 	margin: 0 auto;
+	// margin-left: 20px;
 	opacity: 0.9;
 	border-radius: 10px;
 	text-align: center;
 	padding-bottom: 30px;
+	button {
+		width: 120px;
+		height: 30px;
+		border: 2px solid #A6D0D8;
+		border-radius: 15px;
+		color: #A6D0D8;
+		background-color: #FCF6E0;
+	}
 	.pagelinks1 {
 		width: 120px;
 		height: 30px;
-		margin: 0 auto;
-		margin-top: 80px;
+		// margin: 0 auto;
+		// margin-top: 80px;
 		border: 2px solid #A6D0D8;
 		border-radius: 15px;
 		padding: 2px;
@@ -36,16 +45,18 @@
 }
 
 .songanimation {
-	margin: 0 auto;
+	float: left;
+	margin-top: 15px;
+	margin-left: 15px;
 	width: 555px;
 	height: 442px;
 	background-color: white;
 	border-radius: 15px;
-	border: 1px solid white;
+	border: 1px solid #F0F0F0;
 	.animation {
 		width: 550px;
 		height: 430px;
-		border: 1px solid white;
+		// border: 1px solid white;
 		margin: 0 auto;
 		margin-top: 5px;
 		// background: sky
@@ -93,56 +104,108 @@
 	}
 }
 
-//////// footnote ////////
-.footnote {
-	margin: 0 auto;
-	// border: 1px solid black;
-	height: 300px;
-	width: 550px;
+.varname {
+	margin: 100px;
+	padding: 0px;
+	clear: both;
 	h4 {
-		text-align: left;
-	}
-	#footnote1 {
-		margin: 0 auto;
-		border: 1px solid #AED9E0;
-		border-radius: 15px;
-		color: #AED9E0;
-		background-color: #FAF3DD;
-		height: 30%;
-		width: 98%;
-		font-size: 1.25em;
-	}
-	#footnote2 {
-		margin: 0 auto;
-		margin-top: 3px;
-		border: 1px solid #AED9E0;
-		border-radius: 15px;
-		color: #AED9E0;
-		background-color: #FAF3DD;
-		height: 30%;
-		width: 98%;
-		font-size: 1.25em;
-	}
-	#footnote3 {
-		margin: 0 auto;
-		margin-top: 3px;
-		border: 1px solid #AED9E0;
-		border-radius: 15px;
-		color: #AED9E0;
-		background-color: #FAF3DD;
-		height: 30%;
-		width: 98%;
-		font-size: 1.25em;
+		padding: 0px;
+		text-align: center;
+		clear: both;
 	}
 }
 
+#translation_1 {
+	padding-top: 15px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	border: 1px solid #AED9E0;
+	border-radius: 15px;
+	color: #AED9E0;
+	background-color: #FAF3DD;
+	height: 100px;
+	width: 95%;
+	font-size: 1.25em;
+}
 
+#translation_2 {
+	padding-top: 15px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	border: 1px solid #AED9E0;
+	border-radius: 15px;
+	color: #AED9E0;
+	background-color: #FAF3DD;
+	height: 120px;
+	width: 95%;
+	font-size: 1.25em;
+}
+
+#translation_3 {
+	padding-top: 15px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	border: 1px solid #AED9E0;
+	border-radius: 15px;
+	color: #AED9E0;
+	background-color: #FAF3DD;
+	height: 120px;
+	width: 95%;
+	font-size: 1.25em;
+}
+
+#translation_4 {
+		padding-top: 15px;
+		margin: 0 auto;
+		margin-bottom: 10px;
+		border: 1px solid #AED9E0;
+		border-radius: 15px;
+		color: #AED9E0;
+		background-color: #FAF3DD;
+		height: 100px;
+		width: 95%;
+		font-size: 1.25em;
+	}
+
+#translation_5 {
+	padding-top: 15px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	border: 1px solid #AED9E0;
+	border-radius: 15px;
+	color: #AED9E0;
+	background-color: #FAF3DD;
+	height: 120px;
+	width: 95%;
+	font-size: 1.25em;
+}
+
+#translation_6 {
+	padding-top: 15px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	border: 1px solid #AED9E0;
+	border-radius: 15px;
+	color: #AED9E0;
+	background-color: #FAF3DD;
+	height: 120px;
+	width: 95%;
+	font-size: 1.25em;
+}
+
+//////// footnote ////////
+.footnote {
+	float: left;
+	margin-top: 55px;
+	margin-left: 15px;
+	// border: 1px solid black;
+	height: 442px;
+	width: 500px;
+}
 
 // exercises
 .exercises {
-	margin-top: 50px;
 	border: 1px solid black;
-	float: right;
 	width: 110px;
 	height: 100px;
 	.ex1 {
@@ -152,6 +215,17 @@
 	}
 }
 
+#favorite {
+	width: 120px;
+	height: 20px;
+	border: 1px solid black;
+}
+
+#unfavorite {
+	width: 150px;
+	height: 20px;
+	border: 1px solid black;
+}
 
 
 // // second characters

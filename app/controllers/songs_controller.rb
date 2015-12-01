@@ -10,7 +10,7 @@ class SongsController < ApplicationController
 
   def show
     @images = Image.all
-    @translations = Translation.all
+    @translation = Translation.find_by(params[:song_id])
     respond_to do |format|
     format.html
     format.json { render :json => @song.to_json(

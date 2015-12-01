@@ -1,13 +1,28 @@
 <div class="songcontainer">
 	</br>
-	<h1>
+	<h1 id="determineSong">
 		<%= @song.songname %>
 	</h1>
 	</br>
-	<div class="pagelinks">
-		<%= link_to 'FLASHCARDS', language_song_flashcards_path(@language, @song) %>
+
+<!-- 	<div class="pagelinks1"> -->
+		<button onclick="playAll()" type="button">PLAY</button>
+		<!-- <button onclick="pauseAll()" type="button">Stop</button> -->
+	<!-- </div> -->
+
+	<% if current_user %>
+	  <%= link_to "favorite", favorite_language_song_path(@language, @song, type: "favorite"), method: :put, class: "pagelinks1" %>
+	  <%= link_to "unfavorite", favorite_language_song_path(@language, @song, type: "unfavorite"), method: :put, class: "pagelinks1" %>
+	<% end %>
+
+	<div class="pagelinks1" type="button">
+		<%= link_to 'BACK', languages_path %>
 	</div>
-</br>
+
+	<div class="pagelinks1" type="button">
+		<%= link_to 'FLASHCARDS', language_song_flashcards_path(@language, @song)%>
+	</div>
+
 	<div>
 		<%= audio_tag("#{@song.songurl}", id: "audioplayer") %>
 	</div>
@@ -22,33 +37,20 @@
 		</div>
 	</div>
 
-	</br>
-
-	<div class="buttons">
-		<button onclick="playAll()" type="button">Play</button>
-		<!-- <button onclick="pauseAll()" type="button">Stop</button> -->
+	<div class="footnote">
+	  <%= div_for(@song.translations.each, class: "foo") do |translation| %>
+	  
+	  <% end %>
 	</div>
 
-	</br>
 
-	<div class="footnote">
+	<!-- <div class="footnote">
 		<h4>Mandarin</h4>
 		<div id="footnote1"></div>
 		<h4>PinYin</h4>
 		<div id="footnote2"></div>
 		<h4>English</h4>
 		<div id="footnote3"></div>
-	</div>
-
-	</br>
-
-	<div class="pagelinks1">
-		<%= link_to 'BACK', languages_path %>
-	</div>
-
-	<% if current_user %>
-	  <%= link_to "favorite", favorite_language_song_path(@language, @song, type: "favorite"), method: :put %>
-	  <%= link_to "unfavorite", favorite_language_song_path(@language, @song, type: "unfavorite"), method: :put %>
-	<% end %>
+	</div> -->
 
 </div>

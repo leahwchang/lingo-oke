@@ -16,8 +16,12 @@
 //= require_tree .
 
 // click language
-$(document).ready(function() {
-	$(".langname").click(function() {
-	$(".songs").slideToggle( "slow" );
-		});
-});
+// $(document).ready(function() {
+// 	$(".langs").click(function() {
+// 	$(".songtitle").slideToggle( "slow" );
+// 		});
+// });
+
+// $(".langs").click(function() {
+//   $(".songs").show( "slow" );
+// });
