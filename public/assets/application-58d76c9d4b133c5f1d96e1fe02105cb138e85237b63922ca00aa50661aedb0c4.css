@@ -12248,61 +12248,61 @@ img {
   border-radius: 15px;
   border: 1px solid #F0F0F0;
 }
-/* line 77, /Users/Leah/Documents/wdi/final-personal/lingo-oke/app/assets/stylesheets/songs.scss */
+/* line 78, /Users/Leah/Documents/wdi/final-personal/lingo-oke/app/assets/stylesheets/songs.scss */
 .songanimation .animation {
   width: 550px;
   height: 430px;
   margin: 0 auto;
   margin-top: 5px;
 }
-/* line 84, /Users/Leah/Documents/wdi/final-personal/lingo-oke/app/assets/stylesheets/songs.scss */
+/* line 85, /Users/Leah/Documents/wdi/final-personal/lingo-oke/app/assets/stylesheets/songs.scss */
 .songanimation .animation #image_0 {
   width: 549px;
   height: 412px;
   position: absolute;
   margin-left: -275px;
 }
-/* line 92, /Users/Leah/Documents/wdi/final-personal/lingo-oke/app/assets/stylesheets/songs.scss */
+/* line 93, /Users/Leah/Documents/wdi/final-personal/lingo-oke/app/assets/stylesheets/songs.scss */
 .songanimation .animation #image_1 {
   margin: 0 auto;
-  margin-top: 60px;
+  margin-top: 30px;
   width: 510px;
   height: 116px;
   position: relative;
 }
-/* line 102, /Users/Leah/Documents/wdi/final-personal/lingo-oke/app/assets/stylesheets/songs.scss */
+/* line 103, /Users/Leah/Documents/wdi/final-personal/lingo-oke/app/assets/stylesheets/songs.scss */
 .songanimation .animation #image_2 {
   width: 403px;
   height: 208px;
   position: relative;
   margin: 0 auto;
-  margin-top: 15px;
+  margin-top: 35px;
   z-index: 1;
 }
-/* line 115, /Users/Leah/Documents/wdi/final-personal/lingo-oke/app/assets/stylesheets/songs.scss */
+/* line 116, /Users/Leah/Documents/wdi/final-personal/lingo-oke/app/assets/stylesheets/songs.scss */
 .songanimation .animation #image_3 {
-  margin-top: -90px;
+  margin-top: -113px;
   margin-left: -278px;
   width: 556px;
-  height: 134px;
+  height: 160px;
   position: absolute;
   border-radius: 15px;
 }
 
-/* line 128, /Users/Leah/Documents/wdi/final-personal/lingo-oke/app/assets/stylesheets/songs.scss */
+/* line 130, /Users/Leah/Documents/wdi/final-personal/lingo-oke/app/assets/stylesheets/songs.scss */
 .varname {
   margin: 100px;
   padding: 0px;
   clear: both;
 }
-/* line 132, /Users/Leah/Documents/wdi/final-personal/lingo-oke/app/assets/stylesheets/songs.scss */
+/* line 134, /Users/Leah/Documents/wdi/final-personal/lingo-oke/app/assets/stylesheets/songs.scss */
 .varname h4 {
   padding: 0px;
   text-align: center;
   clear: both;
 }
 
-/* line 139, /Users/Leah/Documents/wdi/final-personal/lingo-oke/app/assets/stylesheets/songs.scss */
+/* line 141, /Users/Leah/Documents/wdi/final-personal/lingo-oke/app/assets/stylesheets/songs.scss */
 #translation_1 {
   padding-top: 15px;
   margin: 0 auto;
@@ -12316,7 +12316,7 @@ img {
   font-size: 1.25em;
 }
 
-/* line 152, /Users/Leah/Documents/wdi/final-personal/lingo-oke/app/assets/stylesheets/songs.scss */
+/* line 154, /Users/Leah/Documents/wdi/final-personal/lingo-oke/app/assets/stylesheets/songs.scss */
 #translation_2 {
   padding-top: 15px;
   margin: 0 auto;
@@ -12330,7 +12330,7 @@ img {
   font-size: 1.25em;
 }
 
-/* line 165, /Users/Leah/Documents/wdi/final-personal/lingo-oke/app/assets/stylesheets/songs.scss */
+/* line 167, /Users/Leah/Documents/wdi/final-personal/lingo-oke/app/assets/stylesheets/songs.scss */
 #translation_3 {
   padding-top: 15px;
   margin: 0 auto;
@@ -12344,7 +12344,7 @@ img {
   font-size: 1.25em;
 }
 
-/* line 178, /Users/Leah/Documents/wdi/final-personal/lingo-oke/app/assets/stylesheets/songs.scss */
+/* line 180, /Users/Leah/Documents/wdi/final-personal/lingo-oke/app/assets/stylesheets/songs.scss */
 #translation_4 {
   padding-top: 15px;
   margin: 0 auto;
@@ -12358,7 +12358,7 @@ img {
   font-size: 1.25em;
 }
 
-/* line 191, /Users/Leah/Documents/wdi/final-personal/lingo-oke/app/assets/stylesheets/songs.scss */
+/* line 193, /Users/Leah/Documents/wdi/final-personal/lingo-oke/app/assets/stylesheets/songs.scss */
 #translation_5 {
   padding-top: 15px;
   margin: 0 auto;
@@ -12372,7 +12372,7 @@ img {
   font-size: 1.25em;
 }
 
-/* line 204, /Users/Leah/Documents/wdi/final-personal/lingo-oke/app/assets/stylesheets/songs.scss */
+/* line 206, /Users/Leah/Documents/wdi/final-personal/lingo-oke/app/assets/stylesheets/songs.scss */
 #translation_6 {
   padding-top: 15px;
   margin: 0 auto;
@@ -12386,7 +12386,7 @@ img {
   font-size: 1.25em;
 }
 
-/* line 218, /Users/Leah/Documents/wdi/final-personal/lingo-oke/app/assets/stylesheets/songs.scss */
+/* line 220, /Users/Leah/Documents/wdi/final-personal/lingo-oke/app/assets/stylesheets/songs.scss */
 .footnote {
   float: left;
   margin-top: 55px;
@@ -12395,27 +12395,27 @@ img {
   width: 500px;
 }
 
-/* line 228, /Users/Leah/Documents/wdi/final-personal/lingo-oke/app/assets/stylesheets/songs.scss */
+/* line 230, /Users/Leah/Documents/wdi/final-personal/lingo-oke/app/assets/stylesheets/songs.scss */
 .exercises {
   border: 1px solid black;
   width: 110px;
   height: 100px;
 }
-/* line 232, /Users/Leah/Documents/wdi/final-personal/lingo-oke/app/assets/stylesheets/songs.scss */
+/* line 234, /Users/Leah/Documents/wdi/final-personal/lingo-oke/app/assets/stylesheets/songs.scss */
 .exercises .ex1 {
   border: 1px solid black;
   width: 100px;
   height: 80px;
 }
 
-/* line 239, /Users/Leah/Documents/wdi/final-personal/lingo-oke/app/assets/stylesheets/songs.scss */
+/* line 241, /Users/Leah/Documents/wdi/final-personal/lingo-oke/app/assets/stylesheets/songs.scss */
 #favorite {
   width: 180px;
   height: 30px;
   border: 1px solid black;
 }
 
-/* line 245, /Users/Leah/Documents/wdi/final-personal/lingo-oke/app/assets/stylesheets/songs.scss */
+/* line 247, /Users/Leah/Documents/wdi/final-personal/lingo-oke/app/assets/stylesheets/songs.scss */
 #unfavorite {
   width: 180px;
   height: 30px;
