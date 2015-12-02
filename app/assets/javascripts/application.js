@@ -14,14 +14,3 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
-// click language
-// $(document).ready(function() {
-// 	$(".langs").click(function() {
-// 	$(".songtitle").slideToggle( "slow" );
-// 		});
-// });
-
-// $(".langs").click(function() {
-//   $(".songs").show( "slow" );
-// });

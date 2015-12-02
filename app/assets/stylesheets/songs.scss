@@ -8,7 +8,6 @@
 	width: 1090px;
 	height: 650px;
 	margin: 0 auto;
-	// margin-left: 20px;
 	opacity: 0.9;
 	border-radius: 10px;
 	text-align: center;
@@ -24,8 +23,6 @@
 	.pagelinks1 {
 		width: 120px;
 		height: 30px;
-		// margin: 0 auto;
-		// margin-top: 80px;
 		border: 2px solid #A6D0D8;
 		border-radius: 15px;
 		padding: 2px;
@@ -45,8 +42,6 @@
 	.pagelinks2 {
 		width: 60px;
 		height: 30px;
-		// margin: 0 auto;
-		// margin-top: 80px;
 		border: 2px solid #A6D0D8;
 		border-radius: 15px;
 		padding: 2px;
@@ -103,10 +98,8 @@
 		#image_2 {
 			width: 403px;
 			height: 208px;
-			// opacity: 0.9;
 			position: relative;
 			margin: 0 auto;
-			// top: 20px;
 			margin-top: 35px;
 			z-index: 1;
 			// border: 1px solid black;
@@ -120,7 +113,6 @@
 			height: 160px;
 			position: absolute;
 			// display: block;
-			// opacity: 0.5;
 			// border: 1px solid black;
 			border-radius: 15px;
 		}
@@ -216,7 +208,7 @@
 	font-size: 1.25em;
 }
 
-//////// footnote ////////
+// footnote divs
 .footnote {
 	float: left;
 	margin-top: 55px;
@@ -249,18 +241,3 @@
 	height: 30px;
 	border: 1px solid black;
 }
-
-
-// // second characters
-// #image_3 img {
-// 	width: 398px;
-// 	height: 232px;
-// 	position: relative;
-// 	border: 1px solid red;
-// 	background-color: red;
-// 	opacity: 0.9;
-// 	position: relative;
-// 	margin: 0 auto;
-// 	top: -455px;
-// 	left: 85px;
-// }

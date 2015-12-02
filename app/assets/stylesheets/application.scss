@@ -15,7 +15,6 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-
 @import 'bourbon';
 @import 'homes';
 @import 'flashcards';
@@ -42,7 +41,7 @@ h1 {
 	font-family: 'Lilita One', cursive;
 }
 
-/*********** header ***********/
+// header + menu bar
 
 .header {
 	width: 100%;
@@ -84,20 +83,14 @@ h1 {
 	z-index: 100000;
 	color: #A6D0D8;
 }
-/*********** header ***********/
 
-/*********** notifications ***********/
+// notifications and alerts
 
 .notifications {
 	width: 525px;
 	height: 50px;
 	margin: 10px auto;
-	// border: 1px solid black;
 }
-
-// .notifications p {
-// 	display: inline-block;
-// }
 
 .notice {
 	margin: 0 auto;
@@ -120,9 +113,7 @@ h1 {
 	border-radius: 15px;
 }
 
-/*********** notifications ***********/
-
-/*********** main ***********/
+// main
 
 .main {
 	width: 95%;
@@ -156,22 +147,7 @@ h3 {
 	font-family: 'Lilita One', cursive;
 }
 
-/*********** main ***********/
-
-/*********** buttons ***********/
-
-// .buttons {
-// 	width: 100px;
-// 	height: 30px;
-// 	// margin: 0 auto;
-// 	button {
-// 		border: 2px solid #A6D0D8;
-// 		border-radius: 15px;
-// 		padding: 3px;
-// 		color: #A6D0D8;
-// 		background-color: #FCF6E0;
-// 	}
-// }
+// buttons
 
 .pagelinks {
 	width: 120px;
@@ -201,19 +177,14 @@ h3 {
   	color: #A6D0D8;
 }
 
-/*********** buttons ***********/
-
-
-/*********** clear div ***********/
+// clear div
 
 .cleardiv {
 	width: 100%;
 	height: 100px;
 }
 
-/*********** clear div ***********/
-
-/*********** footer ***********/
+// footer
 
 .footer {
 	position: absolute;
@@ -225,5 +196,3 @@ h3 {
 	clear: both;
 	opacity: 0.9;
 }
-
-/*********** footer **********/

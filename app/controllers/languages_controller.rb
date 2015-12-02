@@ -2,6 +2,7 @@ class LanguagesController < ApplicationController
   before_action :authenticate_user!
   respond_to :json
   
+  # create json object
   def index
     @language = Language.new
     @languages = Language.all

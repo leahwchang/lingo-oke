@@ -33,6 +33,8 @@ class SongsController < ApplicationController
     @song = Song.new
   end
 
+  # if user clicks on button and it is favorite, then add @song to favorites table
+  # if user clicks on button and it is unfavorite, then delete @song from favorites table
   def favorite
     type = params[:type]
     if type == "favorite"
@@ -42,7 +44,6 @@ class SongsController < ApplicationController
       current_user.favorites.delete(@song)
       redirect_to :back, notice: "You unfavorited #{@song.songname}"
     else
-      # Type missing, nothing happens
       redirect_to :back, notice: "Nothing happened."
     end
   end
