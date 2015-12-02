@@ -1,28 +1,5 @@
-== README
+Lingo-Oke!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Lingo-Oke! is a Rails karaoke app teaching Mandarin with sing-along folksongs and reviews vocabulary with flashcards. This app was created for my nephew to learn Mandarin but can be used by anyone who is interested in learning Mandarin.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+http://leah-lingooke.herokuapp.com/
