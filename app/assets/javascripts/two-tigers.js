@@ -50,8 +50,10 @@ function playAudio() {
   audioplayer.play();
 }
 
-function pauseAudio() {
-  audioplayer.pause();
+function stopAudio() {
+    var audioPlayer = document.getElementsByTagName('audio')[0];
+    audioPlayer.pause();
+    audioPlayer.currentTime = 0;
 }
 
 // lyrics -two tigers- mandarin
@@ -249,15 +251,15 @@ function playPictures() {
   });
 }
 
-var t;
+var myVar = setInterval(playPictures, 2000);
 
 function playAnimations() {
 	playPictures(); // on load
-	t = setInterval(playPictures, 2000); // set to run continuously
+	// myVar = setInterval(playPictures, 2000); // set to run continuously
 }
 
-function pauseAnimations() {
-	clearTimeout(t);
+function stopAnimations() {
+  clearInterval(myVar);
 }
 
 // play all components
@@ -269,8 +271,7 @@ function playAll() {
 }
 
 // pause all components
-// function pauseAll() {
-// 	pauseAudio();
-// 	pauseLyrics();
-// 	pauseAnimations();
-// }
+function stopAll() {
+	stopAudio();
+	stopAnimations();
+}

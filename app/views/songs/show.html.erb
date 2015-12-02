@@ -10,6 +10,11 @@
 	<!-- <button onclick="pauseAll()" type="button">Stop</button> -->
 	<!-- </div> -->
 
+		<!-- 	<div class="pagelinks1"> -->
+	<button onclick="stopAll()" type="button">STOP</button>
+	<!-- <button onclick="pauseAll()" type="button">Stop</button> -->
+	<!-- </div> -->
+
 	<!-- favorite/unfavorite button -->
   <% if current_user.favorites.include? @song %>
     <%= link_to icon('heart'), favorite_language_song_path(@language, @song, type: "unfavorite"), method: :put, class: "pagelinks2" %>
